@@ -21,6 +21,15 @@ header h1 {
   letter-spacing: 3px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
+.categoria a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.categoria a:hover {
+  cursor: pointer;
+  color: #f1c40f;
+}
 
 header p {
   font-size: 1.2em;

@@ -1,2 +1,2 @@
-# Mi-tienda
-Tienda general
+# Richard-
+pagina general

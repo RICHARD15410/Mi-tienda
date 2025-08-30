@@ -7,20 +7,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Encabezado -->
   <header>
     <h1>👑 ARGYOSTUDIO 👑</h1>
-    <p>Moda, estilo y creatividad sin límites</p>
-    <p class="mensaje-secundario">Creando una página con ChatGPT en 1 hora 💻❤️</p>
+    <p class="mensaje-secundario">¡Buenos días! Creando una página con ChatGPT en 1 hora 💻❤️</p>
+    <button id="sorpresaBtn">Presiona aquí</button>
+    <p id="mensajeFinal" class="mensaje-secundario" style="display:none;">¿Cómo va en tu día, preciosa? 💛</p>
   </header>
 
-  <!-- Footer opcional -->
-  <footer>
-    <p>© 2025 ∞ ARGYOSTUDIO ∞ · Todos los derechos reservados</p>
-  </footer>
+  <script>
+    const boton = document.getElementById('sorpresaBtn');
+    const mensaje = document.getElementById('mensajeFinal');
+
+    boton.addEventListener('click', () => {
+      mensaje.style.display = 'block'; // muestra el mensaje
+      boton.style.display = 'none'; // oculta el botón
+    });
+  </script>
 </body>
 </html>
-
 
 
 

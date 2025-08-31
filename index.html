@@ -3,28 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOLA AMOR</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Katty Moda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    header {
+      background-color: #d63384;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 2em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #d63384;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px;
+      min-height: 300px;
+      border-bottom: 1px solid #ccc;
+    }
+    section h2 {
+      color: #d63384;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>👑 HOLA AMOR 👑</h1>
-    <p class="mensaje-secundario">¡Buenos días! Creando una página con ChatGPT en 1 hora 💻❤️</p>
-    <button id="sorpresaBtn">Presiona aquí</button>
-    <p id="mensajeFinal" class="mensaje-secundario" style="display:none;">¿Cómo va en tu día, preciosa Rocío? 💛</p>
-  </header>
+  <header>Katty Moda</header>
 
-  <script>
-    const boton = document.getElementById('sorpresaBtn');
-    const mensaje = document.getElementById('mensajeFinal');
+  <nav>
+    <a href="#abrigos">Abrigos</a>
+    <a href="#polos">Polos</a>
+    <a href="#pantalones">Pantalones</a>
+  </nav>
 
-    boton.addEventListener('click', () => {
-      mensaje.style.display = 'block'; // muestra el mensaje
-      boton.style.display = 'none'; // oculta el botón
-    });
-  </script>
+  <section id="abrigos">
+    <h2>Abrigos</h2>
+    <p>Explora nuestra colección de abrigos modernos y elegantes.</p>
+  </section>
+
+  <section id="polos">
+    <h2>Polos</h2>
+    <p>Variedad de polos cómodos y con estilo para toda ocasión.</p>
+  </section>
+
+  <section id="pantalones">
+    <h2>Pantalones</h2>
+    <p>Pantalones casuales y elegantes adaptados a tu estilo.</p>
+  </section>
 </body>
 </html>
+
+
 
 
 

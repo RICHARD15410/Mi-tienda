@@ -3,65 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Componentes</title>
+  <title>Arduino Uno</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       background: #f4f4f4;
       text-align: center;
     }
 
-    header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 2px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-      padding: 30px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      max-width: 100%;
-      height: 120px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-
-    /* Sección de detalle */
     .detalle {
-      display: none; /* Oculto al inicio */
-      padding: 30px;
-      text-align: left;
       max-width: 800px;
       margin: auto;
       background: #fff;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
     }
 
     .detalle img {
@@ -73,7 +32,8 @@
     .volver {
       margin-top: 20px;
       padding: 10px 20px;
-      background: #f1c40f;
+      background: #3498db;
+      color: #fff;
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -81,40 +41,21 @@
     }
 
     .volver:hover {
-      background: #d4ac0d;
+      background: #2e86c1;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>RG SERVICE</h1>
-    <h2>Componentes</h2>
-  </header>
-
-  <!-- Tarjetas -->
-  <div class="grid" id="grid">
-    <div class="card" onclick="mostrarDetalle()">
-      <img src="Imagen/arduino_uno.png" alt="Arduino Uno">
-      <h3>Arduino Uno</h3>
-    </div>
-    <!-- Aquí irían más tarjetas -->
-  </div>
-
-  <!-- Detalle del Arduino -->
-  <div class="detalle" id="detalle">
+  <div class="detalle">
     <h2>Arduino Uno</h2>
-    <img src="Imagen/arduino_uno.png" alt="Arduino Uno">
+    <img src="../Imagen/arduino_uno.png" alt="Arduino Uno">
     <p><strong>Descripción:</strong> Placa de desarrollo muy usada en proyectos electrónicos y de programación.</p>
     <p><strong>Precio:</strong> S/ 95.00</p>
-    <p><strong>Contacto WhatsApp:</strong> <a href="https://wa.me/929652396" target="_blank">929652396</a></p>
-    <button class="volver" onclick="volver()">Volver</button>
+    <p><strong>Contacto WhatsApp:</strong> 
+      <a href="https://wa.me/929652396" target="_blank">929652396</a>
+    </p>
+    <button class="volver" onclick="window.history.back()">Volver</button>
   </div>
+</body>
+</html>
 
-  <script>
-    function mostrarDetalle() {
-      document.getElementById('grid').style.display = 'none';
-      document.getElementById('detalle').style.display = 'block';
-    }
-
-    funct

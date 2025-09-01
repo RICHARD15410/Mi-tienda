@@ -3,67 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arduino UNO - RG SERVICE</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Componentes</title>
   <style>
-    .producto {
-      max-width: 800px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      color: #333;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
       text-align: center;
     }
-    .producto img {
-      width: 250px;
-      height: auto;
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    /* Sección de detalle */
+    .detalle {
+      display: none; /* Oculto al inicio */
+      padding: 30px;
+      text-align: left;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .detalle img {
+      width: 200px;
+      object-fit: contain;
       margin-bottom: 20px;
     }
-    .precio {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #27ae60;
-      margin: 15px 0;
-    }
-    .whatsapp {
-      display: inline-block;
+
+    .volver {
       margin-top: 20px;
-      padding: 12px 25px;
-      background: #25d366;
-      color: #fff;
-      text-decoration: none;
+      padding: 10px 20px;
+      background: #f1c40f;
+      border: none;
       border-radius: 8px;
-      font-size: 1.2em;
-      transition: background 0.3s;
+      cursor: pointer;
+      font-size: 16px;
     }
-    .whatsapp:hover {
-      background: #1ebd57;
+
+    .volver:hover {
+      background: #d4ac0d;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Arduino UNO</h1>
+    <h1>RG SERVICE</h1>
+    <h2>Componentes</h2>
   </header>
 
-  <div class="producto">
-    <img src="imagenes/arduino_uno.png" alt="Arduino UNO">
-    <p>
-      El Arduino UNO es una placa de desarrollo basada en el microcontrolador ATmega328P.  
-      Perfecto para estudiantes, makers y proyectos de electrónica.
-    </p>
-    <p class="precio">Precio: S/ 85.00</p>
-
-    <!-- Botón directo a WhatsApp -->
-    <a class="whatsapp" href="https://wa.me/51929652396?text=Hola%20estoy%20interesado%20en%20el%20Arduino%20UNO" target="_blank">
-      💬 Consultar por WhatsApp
-    </a>
+  <!-- Tarjetas -->
+  <div class="grid" id="grid">
+    <div class="card" onclick="mostrarDetalle()">
+      <img src="Imagen/arduino_uno.png" alt="Arduino Uno">
+      <h3>Arduino Uno</h3>
+    </div>
+    <!-- Aquí irían más tarjetas -->
   </div>
 
-  <a href="index.html" class="volver-link">⬅ Volver a la tienda</a>
+  <!-- Detalle del Arduino -->
+  <div class="detalle" id="detalle">
+    <h2>Arduino Uno</h2>
+    <img src="Imagen/arduino_uno.png" alt="Arduino Uno">
+    <p><strong>Descripción:</strong> Placa de desarrollo muy usada en proyectos electrónicos y de programación.</p>
+    <p><strong>Precio:</strong> S/ 95.00</p>
+    <p><strong>Contacto WhatsApp:</strong> <a href="https://wa.me/929652396" target="_blank">929652396</a></p>
+    <button class="volver" onclick="volver()">Volver</button>
+  </div>
 
-</body>
-</html>
+  <script>
+    function mostrarDetalle() {
+      document.getElementById('grid').style.display = 'none';
+      document.getElementById('detalle').style.display = 'block';
+    }
+
+    funct

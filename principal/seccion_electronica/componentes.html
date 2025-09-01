@@ -51,6 +51,21 @@
       font-size: 18px;
       color: #333;
     }
+    .volver-link {
+      display: block;
+      margin: 30px auto;
+      text-decoration: none;
+      font-size: 18px;
+      color: #222;
+      background: #ddd;
+      padding: 12px 20px;
+      border-radius: 8px;
+      width: fit-content;
+      transition: background 0.3s;
+    }
+    .volver-link:hover {
+      background: #bbb;
+    }
   </style>
 </head>
 <body>
@@ -79,9 +94,10 @@
     <div class="card" onclick="location.href='multimetro.html'">
       <h3>Multímetro</h3>
     </div>
-    <a class="volver-link" href="../../../index.html">Volver a RG Service ↩️</a>
-  </div>
   </section>
+
+  <!-- Opción Volver como enlace seleccionable -->
+  <a class="volver-link" href="../../../index.html">Volver a RG Service ↩️</a>
 
 </body>
 </html>

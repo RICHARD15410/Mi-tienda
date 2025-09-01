@@ -4,77 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RG SERVICE - Tienda General</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      text-align: center;
     }
     header {
-      background: #222;
-      color: #fff;
+      background-color: #222;
+      color: white;
       padding: 20px;
+      font-size: 24px;
     }
-    h1 {
-      margin: 0;
-      font-size: 30px;
-      letter-spacing: 2px;
-    }
-    h2 {
-      margin: 10px 0 0;
-      font-size: 18px;
-      color: #ccc;
-      font-weight: normal;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .contenedor {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
       gap: 20px;
-      padding: 40px;
     }
     .card {
-      background: #fff;
+      background: white;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 250px;
+      transition: transform 0.2s;
       cursor: pointer;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
     }
-    .card img {
-      max-width: 100%;
-      height: 150px;
-      object-fit: contain;
-      margin-bottom: 15px;
+    .card h2 {
+      margin: 15px 0;
     }
-    .card h3 {
-      margin: 0;
-      font-size: 20px;
-      color: #333;
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>RG SERVICE</h1>
-    <h2>Tienda General 🛒</h2>
+    🚀 RG SERVICE - Tienda General
   </header>
 
-  <div class="card" onclick="location.href='principal/seccion_electronica/index_electronica.html'">
-  <h3>Electrónica ⚡</h3>
-</div>
+  <main>
+    <h1>Bienvenido a RG Service</h1>
+    <p>Selecciona la sección que deseas explorar:</p>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/200" alt="Próximamente">
-      <h3>Próximamente...</h3>
+    <div class="contenedor">
+      <!-- CASILLERO ELECTRÓNICA -->
+      <div class="card">
+        <a href="principal/seccion_electronica/index_electronica.html">
+          <h2>⚡ Electrónica</h2>
+          <p>Arduino, PIC, resistencias y más</p>
+        </a>
+      </div>
+
+      <!-- FUTURAS SECCIONES -->
+      <div class="card">
+        <a href="#">
+          <h2>👕 Moda (próximamente)</h2>
+          <p>Ropa y accesorios</p>
+        </a>
+      </div>
     </div>
-  </section>
-
+  </main>
 </body>
 </html>
+
 

@@ -12,6 +12,7 @@
     <h1>RG SERVICE</h1>
     <h2>Sección: Electrónica ⚡</h2>
   </header>
+<input type="text" id="buscador" placeholder="Buscar componente..." onkeyup="filtrarComponentes()" style="width:100%; padding:10px; margin:15px 0; border-radius:8px; border:1px solid #ccc;">
 <section class="grid">
  <!-- en principal/seccion_electronica/componentes.html -->
 <div class="card" onclick="location.href='arduino/arduino_index.html'">
@@ -39,9 +40,31 @@
 
   <!-- Enlace “Volver a RG Service” corregido -->
   <a class="volver-link" href="../../index.html">Volver a RG Service ↩️</a>
+  
+<script>
+function filtrarComponentes() {
+  // Obtener texto del buscador
+  let input = document.getElementById("buscador").value.toLowerCase();
+  
+  // Seleccionar todas las tarjetas
+  let cards = document.getElementsByClassName("card");
+
+  // Recorrer tarjetas y ocultar las que no coincidan
+  for (let i = 0; i < cards.length; i++) {
+    let titulo = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+    
+    if (titulo.includes(input)) {
+      cards[i].style.display = "block"; // mostrar
+    } else {
+      cards[i].style.display = "none"; // ocultar
+    }
+  }
+}
+</script>
 
 </body>
 </html>
+
 
 
 

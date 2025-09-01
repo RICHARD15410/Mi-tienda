@@ -10,11 +10,11 @@ body {
 
 /* Header */
 header {
-  padding: 150px 20px;
+  padding: 60px 20px;
 }
 
 header h1 {
-  font-size: 4em;
+  font-size: 2.5em;
   margin: 0;
   color: #ffffff;
   letter-spacing: 3px;
@@ -23,7 +23,7 @@ header h1 {
 
 /* Mensaje secundario */
 .mensaje-secundario {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #f1c40f;
   margin-top: 30px;
   font-style: italic;

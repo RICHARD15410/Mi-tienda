@@ -50,8 +50,13 @@ button:hover {
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 tarjetas por fila */
-  gap: 15px;
+  gap: 15px; /* espacio entre tarjetas */
   padding: 20px;
+  justify-content: center; /* centra el grid dentro de la página */
+  max-width: 1200px; /* ancho máximo opcional para no ocupar todo */
+  margin: 0 auto; /* centra el contenedor */
+}
+
 }
 
 /* Tarjetas */
@@ -64,6 +69,9 @@ button:hover {
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
   text-align: center;
+  width: 100%; /* ahora cada tarjeta ocupa solo su columna */
+}
+
 }
 
 .card:hover {
